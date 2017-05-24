@@ -1,0 +1,9 @@
+<h1>Welcome Abuelita Sordita</h1>
+  <% if @abuelita %>
+    <p>Tu Abuelita dice: "<span id="grandma_says"><%= @abuelita %></span>"</p>
+  <% end %>
+
+  <%= form_tag ("/abuelita"), method: "post" do %>
+    <%= text_field_tag ('mesage') %>
+    <%= submit_tag ("Dile algo!!") %>
+  <% end %>
